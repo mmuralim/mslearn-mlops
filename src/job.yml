@@ -2,7 +2,9 @@ $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 code: .
 command: >-
   python train-model-parameters.py
-  --training_data ${{inputs.training_data}}
+#  --training_data ${{inputs.training_data}}
+  --training_data diabetes-prod-folder
+
   --reg_rate ${{inputs.reg_rate}}
   --metrics_output ${{outputs.metrics_output}}
 inputs:
